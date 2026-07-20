@@ -1,0 +1,298 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fbe9e7; /* fondo rosado suave */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Corazones flotantes */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.heart-float {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 20px;
+    animation: floatUp 6s linear forwards;
+    opacity: 0.9;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(720deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Cabecera estilo Pinterest */
+.board-header {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+.board-header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #d6336c;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.board-header p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #b23b5e;
+}
+
+/* Masonry (Pinterest) */
+.board {
+    column-count: 3;
+    column-gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Sobre animado */
+.envelope-card .envelope-wrapper {
+    max-height: 160px;
+    overflow: hidden;
+    transition: max-height 0.7s ease;
+    background: #fff5f5;
+    cursor: pointer;
+}
+
+..envelope-card .envelope-wrapper {
+    max-height: 160px;
+    overflow: hidden;
+    transition: max-height 0.7s ease;
+    background: #fff5f5;
+    cursor: pointer;
+}
+
+.envelope-card .envelope-wrapper.opened {
+    max-height: 2000px;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background: #ffecec;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: background 0.3s;
+}
+
+.envelope-body {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 140px solid #f8bbd0;
+    position: relative;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid #f48fb1;
+    transform-origin: top;
+    transition: transform 0.5s ease;
+    z-index: 2;
+}
+
+.opened .envelope-flap {
+    transform: translateX(-50%) rotateX(180deg);
+}
+
+.heart-seal {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #e91e63;
+    z-index: 3;
+    transition: transform 0.5s ease;
+}
+
+.opened .heart-seal {
+    transform: translateX(-50%) scale(1.3);
+}
+
+.letter-content {
+    display: none;
+    padding: 20px;
+    background: #fffef9;
+    border-top: 2px dashed #f8bbd0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #5d3a4b;
+}
+
+.opened .letter-content {
+    display: block;
+}
+
+.close-letter {
+    margin-top: 10px;
+    background: #f8bbd0;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Contador */
+.counter-card {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    color: white;
+}
+
+.counter-card h2 {
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+}
+
+#counter {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.counter-card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Galería */
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+/* Música */
+.music-card {
+    padding: 20px;
+    text-align: center;
+    background: #fff0f3;
+}
+
+.music-card h3 {
+    font-family: 'Pacifico', cursive;
+    color: #d6336c;
+    margin-bottom: 10px;
+}
+
+#play-btn {
+    background: #d6336c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#play-btn:hover {
+    background: #b02350;
+}
+
+/* Mensaje secreto */
+.secret-card {
+    padding: 20px;
+    text-align: center;
+    background: #fff5f5;
+}
+
+.secret-btn {
+    background: transparent;
+    border: 2px dashed #e91e63;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    color: #d6336c;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.secret-btn:hover {
+    background: #ffe4ec;
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 15px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    color: #5d3a4b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .board {
+        column-count: 2;
+    }
+    .board-header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .board {
+        column-count: 1;
+    }
+    .letter-content {
+    max-height: none;
+    overflow: visible;
+}
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carta para Danny 💖</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="board-header">
+    <h1>Carta para Danny</h1>
+    <p>Un rinconcito especial para ti, con todo mi amor</p>
+</header>
+
+<main class="board">
+    <!-- Sobre animado -->
+    <div class="card envelope-card" id="envelope-card">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body"></div>
+                <div class="heart-seal">♥</div>
+            </div>
+            <div class="letter-content">
+                <p class="letter-text">
+                    Mi querido Pupuyu,<br><br>
+                    Han pasado <strong>7 meses</strong> desde aquel <strong>20 de diciembre de 2025</strong>, donde sabia que me ibas a pedir pero igual me emocione fulll y cada día a tu lado ha sido un regalo, adoro todo de nuestra relacion, mas que todo las salidas, que se quedaran en mi corazon hasta que podamos reencontrarnos . Eres mi sol mi luna y mis corviches, te amo mas que todos los corviches que hace mi abuelita, (me dieron ganas de otro corviche ehheeh), no hay palabras suficientes para expresar lo feliz que me haces, eres mi persona favorita, mi todo.<br><br>
+                    Te amo con cada latido,<br>
+                    <em>Siempre tuya tu cucu </em> 💖
+                </p>
+                <button class="close-letter" onclick="closeEnvelope()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Contador automático -->
+<div class="card counter-card">
+    <h2>Nuestro Tiempo</h2>
+    <div id="counter">
+        <span id="months">7</span> meses,
+        <span id="days">0</span> días,
+        <span id="hours">0</span> h,
+        <span id="minutes">0</span> min,
+        <span id="seconds">0</span> s
+    </div>
+    <p>desde el 20/12/2025</p>
+</div>
+
+
+<!-- AQUÍ VA LA GALERÍA -->
+<!-- Galería -->
+<div class="card gallery-card">
+    <img src="fotos/foto1.jpeg" alt="Recuerdo 1">
+</div>
+
+<div class="card gallery-card">
+    <img src="fotos/foto2.jpeg" alt="Recuerdo 2">
+</div>
+
+<div class="card gallery-card">
+    <img src="fotos/foto3.jpeg" alt="Recuerdo 3">
+</div>
+
+<div class="card gallery-card">
+    <img src="fotos/foto4.jpeg" alt="Recuerdo 4">
+</div>
+
+<div class="card gallery-card">
+    <img src="fotos/foto5.jpeg" alt="Recuerdo 5">
+</div>
+
+<div class="card gallery-card">
+    <img src="fotos/foto6.jpeg" alt="Recuerdo 6">
+</div>
+
+<div class="card gallery-card">
+    <img src="fotos/foto7.jpeg" alt="Recuerdo 7">
+</div>
+
+<div class="card gallery-card">
+    <img src="fotos/foto8.jpeg" alt="Recuerdo 8">
+</div>
+
+<div class="card gallery-card">
+    <img src="fotos/foto9.jpeg" alt="Recuerdo 9">
+</div>
+
+
+
+<!-- Música -->
+<div class="card music-card">
+
+
+    <!-- Mensaje secreto -->
+    <div class="card secret-card">
+        <button class="secret-btn" onclick="revealSecret()">💌 ¿Un mensaje secreto?</button>
+        <div class="hidden-message" id="secret-msg">
+            <p> Paticio de mi vida, 7 de millones de meses juntos, te amo 💕</p>
+        </div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+
+<div id="hearts-container"></div>
+
+<header class="board-header">
+    <h1>Carta para el cucú </h1>
+    <p>Un rinconcito especial para ti, con todo mi amor</p>
+</header>
+<script src="script.js"></script>
+
+</body>
+</html>
